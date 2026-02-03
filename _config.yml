@@ -1,0 +1,134 @@
+# Cryptography Course Site
+title: Cryptography - CS-6343
+description: Course materials, lectures, and assignments for Cryptography (CS-6343) at Texas Tech University
+url: "https://cryptography.scottweeden.online"
+baseurl: ""
+
+# Author Information
+author:
+  name: Scott Weeden
+  email: sweeden@ttu.edu
+  github: sweeden-ttu
+  linkedin: weedens
+
+# Course Information
+course:
+  name: "Cryptography"
+  number: "CS-6343"
+  semester: "Spring 2026"
+  instructor: "Professor Name"
+  canvas_url: "https://texastech.instructure.com/courses/70714"
+  main_site: "https://scottweeden.online"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:year/:month/:day/:title/
+timezone: America/Chicago
+
+# Collections
+collections:
+  lectures:
+    output: true
+    permalink: /lectures/:name/
+  assignments:
+    output: true
+    permalink: /assignments/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+  resources:
+    output: true
+    permalink: /resources/:name/
+
+# Kramdown Settings
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+    css_class: 'highlight'
+  math_engine: katex
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Feed Settings
+feed:
+  path: /feed.xml
+
+# SEO Settings
+logo: /assets/images/logo.png
+social:
+  name: Scott Weeden
+  links:
+    - https://github.com/sweeden-ttu
+    - https://linkedin.com/in/weedens
+    - https://scottweeden.online
+
+# Defaults
+defaults:
+  # Posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      layout: post
+      author: Scott Weeden
+      course: "Cryptography"
+  # Lectures
+  - scope:
+      path: "_lectures"
+      type: lectures
+    values:
+      layout: lecture
+      author: Scott Weeden
+      course: "Cryptography"
+  # Assignments
+  - scope:
+      path: "_assignments"
+      type: assignments
+    values:
+      layout: assignment
+      author: Scott Weeden
+      course: "Cryptography"
+  # Projects
+  - scope:
+      path: "_projects"
+      type: projects
+    values:
+      layout: project
+      author: Scott Weeden
+      course: "Cryptography"
+  # Pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - .sass-cache/
+  - .jekyll-cache/
+
+# Include files
+include:
+  - _pages
+
+# Sass/SCSS Settings
+sass:
+  sass_dir: _sass
+  style: compressed
